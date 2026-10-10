@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="page">
+
+
+<div class="page-header">
+    <span>SAVINGS GOALS</span>
+    <h1>Build Your Future</h1>
+    <p>Create goals and monitor your savings progress.</p>
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Emergency Fund</h3>
+        <h2>₹60,000 / ₹1,00,000</h2>
+
+        <progress value="60" max="100"></progress>
+
+        <p>60% completed</p>
+    </div>
+
+    <div class="card">
+        <h3>New Laptop</h3>
+        <h2>₹45,000 / ₹60,000</h2>
+
+        <progress value="75" max="100"></progress>
+
+        <p>75% completed</p>
+    </div>
+
+    <div class="card">
+        <h3>Vacation</h3>
+        <h2>₹20,000 / ₹50,000</h2>
+
+        <progress value="40" max="100"></progress>
+
+        <p>40% completed</p>
+    </div>
+
+</div>
+
+
+</section>
+
+{% endblock %}

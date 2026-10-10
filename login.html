@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="auth-page">
+
+
+<div class="auth-card">
+
+    <span>WELCOME BACK</span>
+
+    <h1>Login to BudgetPilot</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Username</label>
+        <input type="text"
+               name="username"
+               placeholder="Enter username"
+               required>
+
+        <label>Password</label>
+        <input type="password"
+               name="password"
+               placeholder="Enter password"
+               required>
+
+        <button type="submit" class="btn">
+            Login
+        </button>
+    </form>
+
+    <p>
+        Don't have an account?
+        <a href="{% url 'register' %}">Create Account</a>
+    </p>
+
+</div>
+
+
+</section>
+
+{% endblock %}

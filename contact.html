@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="page">
+
+
+<div class="page-header">
+    <span>CONTACT US</span>
+    <h1>How Can We Help?</h1>
+    <p>
+        Have a question about BudgetPilot? Send us a message.
+    </p>
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <h2>Send a Message</h2>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <input type="text"
+                   name="name"
+                   placeholder="Your Name"
+                   required>
+
+            <input type="email"
+                   name="email"
+                   placeholder="Your Email"
+                   required>
+
+            <input type="text"
+                   name="subject"
+                   placeholder="Subject"
+                   required>
+
+            <textarea name="message"
+                      rows="6"
+                      placeholder="Your Message"
+                      required></textarea>
+
+            <button type="submit" class="btn">
+                Send Message
+            </button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Support</h2>
+
+        <p>
+            Need help using your dashboard, budgets or goals?
+            Contact our support team.
+        </p>
+
+        <p>Email: support@budgetpilot.com</p>
+        <p>Monday - Friday</p>
+        <p>9:00 AM - 6:00 PM</p>
+    </div>
+
+</div>
+
+<div class="card">
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What is BudgetPilot?</h3>
+    <p>
+        BudgetPilot is a personal finance planning application
+        for tracking income, expenses, budgets and savings.
+    </p>
+
+    <h3>Can I create savings goals?</h3>
+    <p>
+        Yes. You can create savings goals and track their progress.
+    </p>
+
+    <h3>Can I track monthly expenses?</h3>
+    <p>
+        Yes. Transactions can be organized by income, expenses
+        and categories.
+    </p>
+</div>
+
+
+</section>
+
+{% endblock %}

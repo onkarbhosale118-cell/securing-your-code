@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="page">
+
+
+<div class="page-header">
+    <span>PROFILE</span>
+    <h1>Account Settings</h1>
+    <p>Manage your preferences and personal information.</p>
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <h2>Personal Information</h2>
+
+        <label>Username</label>
+        <input type="text"
+               value="{{ user.username }}"
+               readonly>
+
+        <label>Email</label>
+        <input type="email"
+               value="{{ user.email }}"
+               readonly>
+    </div>
+
+    <div class="card">
+        <h2>Preferences</h2>
+
+        <p>Currency: Indian Rupee (₹)</p>
+        <p>Monthly Budget: Enabled</p>
+        <p>Spending Tracking: Enabled</p>
+    </div>
+
+    <div class="card">
+        <h2>Settings</h2>
+
+        <p>Notifications: Enabled</p>
+        <p>Monthly Reports: Enabled</p>
+
+        <a href="{% url 'logout' %}" class="btn">
+            Logout
+        </a>
+    </div>
+
+</div>
+
+
+</section>
+
+{% endblock %}
